@@ -1,20 +1,22 @@
-public class Nodo <T> {
+//lista simplemente enlazada, hecho por Juan Coll
+
+public class Nodo <T> { 
     protected T data;
     protected Nodo <T> pNext;
     
     
-    Nodo (T elem){
+    Nodo (T elem){ // constructor de los nodos
         this.data = elem;
         this.pNext = null;
     }
 }
 
-public class Lista <T> {
+public class Lista <T> { // clase lista
     private Nodo <T> pFirst;
     private int iN;
     private String name;
     
-    public Lista (String s){ 
+    public Lista (String s){ //constructor de la lista
         this.name = s;
         this.pFirst = null;
         this.iN = 0;
@@ -40,7 +42,7 @@ public class Lista <T> {
     public Nodo<T> Ultimo(){
         return null;
     }
-    public Nodo<T> Proximo(Nodo<T> pValor){
+    public Nodo<T> Proximo(Nodo<T> pValor){ // este metodo nos da el proximo valor de la lista dependiendo del caso
         if (pValor != this.Ultimo()){
             return pValor.pNext;
         } else{
@@ -48,7 +50,7 @@ public class Lista <T> {
         }
     }
             
-  public void Insertar (T x, Nodo<T> pValor){
+  public void Insertar (T x, Nodo<T> pValor){ // metodo de insertar en una lista
       Nodo<T> pNew= new Nodo<>(x);
       if (this.EsVacio()){
           this.pFirst = pNew;
