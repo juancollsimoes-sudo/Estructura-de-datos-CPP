@@ -1,3 +1,5 @@
+//Hecho por Juan Coll
+
 #include <iostream>
 
 int main()
