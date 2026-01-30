@@ -1,4 +1,5 @@
 //lista doblemente enlazada
+// hehco por Juan Coll
 public class Nodo<T>{
     protected T data;
     protected Nodo T pNext, pAnt;
